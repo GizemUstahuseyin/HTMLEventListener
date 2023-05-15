@@ -1,0 +1,51 @@
+<DOCTYPE! HTML>
+    <html>
+    <head>
+        <title>eventListen</title>
+        <style>
+            button{
+                width:400px;
+                height:200px;
+                margin-top:150px;
+                margin-bottom:150px;
+                margin-right:150px;
+                margin-left:350px;
+               
+                background-color:lightgreen;
+            }
+        </style>
+
+    </head>
+    <body>
+        <button type="button" id="btn">TEST  BUTTON</button>
+        <p id="yazi"></p>
+
+        <script>
+            var btn = document.getElementById('btn');
+            var yazi = document.getElementById('yazi');
+
+            btn.addEventListener("mouseover", f1);
+            btn.addEventListener("click", f2);
+            btn.addEventListener("mouseout", f3);
+            btn.addEventListener("mousedown", f4);
+            btn.addEventListener("mouseup", f5);
+
+            function f1() {
+                yazi.innerHTML += "Mouse Üstünde <br/>" ;
+            }
+            function f2() {
+                yazi.innerHTML += "Mouse Týklandý <br/>";
+            }
+            function f3() {
+                yazi.innerHTML += "Mouse Dýþýnda <br/>";
+            }
+            function f4() {
+                yazi.innerHTML += "Mouse Aþaðýda <br/>";
+            }
+            function f5() {
+                yazi.innerHTML = "Mouse Yukarýda";
+            }
+
+        </script>
+    </body>
+</html>
